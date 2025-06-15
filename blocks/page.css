@@ -1,0 +1,16 @@
+.page {
+  max-width: 1440px;
+  background-color: #fcf5e5;
+  font-family: Poppins, Arial, sans-serif;
+  margin: 0 auto;
+}
+
+.page__header {
+  margin: 34px 80px 20px;
+}
+
+@media screen and (max-width: 654px) {
+  .page__header {
+    margin: 20px auto 20px;
+  }
+}

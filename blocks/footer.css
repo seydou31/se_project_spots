@@ -1,0 +1,13 @@
+.footer {
+  color: #212121;
+  opacity: 0.7;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 60px 0;
+}
+
+.page__footer {
+  margin: 0 auto;
+}
