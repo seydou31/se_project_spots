@@ -8,7 +8,7 @@
 .card__image {
   width: 413px;
   height: 413px;
-  border-radius: 5px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -20,7 +20,9 @@
 }
 
 .card__description {
+  font-weight: 20px;
   width: 75%;
+  line-height: 1.2;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -35,6 +37,8 @@
   background-position: center;
   background-size: cover;
   transition: background-image 0.2s linear;
+  border: none;
+  background-color: #fcf5e5;
 }
 
 .card__like-logo:hover {
@@ -44,6 +48,7 @@
 
 @media screen and (max-width: 654px) {
   .card {
+    width: 288px;
     font-size: 16px;
   }
   .card__image {
@@ -52,7 +57,7 @@
   }
 
   .card__description {
-    width: 95px;
+    max-width: 95px;
   }
 
   .card__like-logo {
@@ -61,6 +66,6 @@
   }
 
   .card__footer {
-    width: 288px;
+    max-width: 288px;
   }
 }

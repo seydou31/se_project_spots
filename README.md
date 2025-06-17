@@ -30,3 +30,7 @@ We used Html, CSS ( Grid, Media Query, Flexbox), and Visual Studio Code.
 ### Video explaining the project
 
 [project video](https://drive.google.com/file/d/1Wbx6W0WLd56sIotti-ciV2TvIitLEFe_/view?usp=drive_link)
+
+### Project page
+
+-[SE-SPOTS](https://seydou31.github.io/se_project_spots/)
