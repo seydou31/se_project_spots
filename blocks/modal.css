@@ -1,0 +1,145 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  color: #212121;
+  background-color: #fff;
+  max-width: 730px;
+  width: 100%;
+  position: relative;
+  padding: 32px 50px;
+  border-radius: 8px;
+}
+
+.modal__title {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  padding: 0 0 32px 0;
+}
+
+.modal__close-button {
+  background-color: #fff;
+  background-image: url(../images/Close\ Icon.svg);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  border: none;
+  transition: background-color 0.4s linear;
+}
+
+.modal__close-button:hover {
+  background-image: url(../images/modal-close-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal__form {
+}
+
+.modal__input-label {
+  display: block;
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  opacity: 0.7;
+  padding: 0 0 8px 0;
+}
+
+.modal__input-name {
+  display: block;
+  margin: 0 0 32px 0;
+  border-radius: 8px;
+  border: 1px solid #21212166;
+  max-width: 630px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+}
+
+.modal__save-button {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  max-width: 156px;
+  width: 100%;
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+@media screen and (max-width: 654px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .modal__container {
+    box-sizing: border-box;
+    max-width: 300px;
+    padding: 22px 12px 12px;
+  }
+
+  .modal__form {
+    max-width: 276px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .modal__title {
+    max-width: 276px;
+    width: 100%;
+    padding: 0 0 34px 0;
+    font-size: 20px;
+  }
+
+  .modal__input-label {
+    max-width: 276px;
+    width: 100%;
+  }
+
+  .modal__close-button {
+    padding: 0;
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal__input-name {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 276px;
+    margin: 0 0 24px 0;
+  }
+
+  .modal__save-button {
+    width: 100%;
+    max-width: 276px;
+  }
+}

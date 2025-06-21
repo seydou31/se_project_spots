@@ -120,6 +120,58 @@
       <footer class="footer page__footer">
         <p class="footer__text">&copy; 2025 seydou badiaka</p>
       </footer>
+      <div class="modal">
+        <div class="modal__container">
+          <h2 class="modal__title">Edit Profile</h2>
+          <button class="modal__close-button" type="button"></button>
+          <form action="" class="modal__form">
+            <label for="input-name" class="modal__input-label">Name</label>
+            <input
+              type="text"
+              id="input-name"
+              class="modal__input-name"
+              placeholder="Type your name"
+            />
+            <label for="input-description" class="modal__input-label"
+              >Description</label
+            >
+            <input
+              type="text"
+              id="input-description"
+              class="modal__input-name"
+              placeholder="Describe yourself"
+            />
+            <button type="submit" class="modal__save-button">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <h2 class="modal__title">New post</h2>
+          <button class="modal__close-button" type="button"></button>
+          <form action="" class="modal__form">
+            <label for="card-image-name" class="modal__input-label"
+              >Image link</label
+            >
+            <input
+              type="link"
+              id="card-image-name"
+              class="modal__input-name"
+              placeholder="Paste a link to the picture"
+            />
+            <label for="card-caption-name" class="modal__input-label"
+              >Caption</label
+            >
+            <input
+              type="text"
+              id="card-caption-name"
+              class="modal__input-name"
+              placeholder="Type your caption"
+            />
+            <button type="submit" class="modal__save-button">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
