@@ -5,15 +5,18 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #00000000;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 32px;
+  transition: visibility 0s linear 0.3s, background-color 0.5s linear;
 }
 
 .modal_is-opened {
+  background-color: #00000066;
   visibility: visible;
+  transition-delay: 0s;
 }
 
 .modal__container {
