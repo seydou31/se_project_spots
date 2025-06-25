@@ -13,34 +13,48 @@ const addCardFormElement = profilePostModal.querySelector(".modal__form");
 const linkInput = addCardFormElement.querySelector("#card-image-name");
 const captionInput = addCardFormElement.querySelector("#card-caption-name");
 
-EditButton.addEventListener("click", function () {
-  profileEditModal.classList.add("modal_is-opened");
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
+function openEditContent() {
+  openModal(profileEditModal);
   inputName.value = profileName.textContent;
   inputDescription.value = profileDescription.textContent;
-});
+}
+
+EditButton.addEventListener("click", openEditContent);
 
 profileCloseBtn.addEventListener("click", function () {
-  profileEditModal.classList.remove("modal_is-opened");
+  closeModal(profileEditModal);
 });
 
 postBtn.addEventListener("click", function () {
-  profilePostModal.classList.add("modal_is-opened");
+  openModal(profilePostModal);
 });
 
 postCloseBtn.addEventListener("click", function () {
-  profilePostModal.classList.remove("modal_is-opened");
+  closeModal(profilePostModal);
 });
 
-formSubmit.addEventListener("submit", function (e) {
+function handleProfileFormSubmit(e) {
   e.preventDefault();
   profileName.textContent = inputName.value;
   profileDescription.textContent = inputDescription.value;
   profileEditModal.classList.remove("modal_is-opened");
-});
+}
+formSubmit.addEventListener("submit", handleProfileFormSubmit);
 
-addCardFormElement.addEventListener("submit", function (e) {
+function handleCardFormSubmit(e) {
   e.preventDefault();
   console.log(linkInput.value);
   console.log(captionInput.value);
   profilePostModal.classList.remove("modal_is-opened");
-});
+  linkInput.value = " ";
+  captionInput.value = " ";
+}
+addCardFormElement.addEventListener("submit", handleCardFormSubmit);

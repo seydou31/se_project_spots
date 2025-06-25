@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #00000000;
+  background-color: #0000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,9 +57,6 @@
   background-size: cover;
 }
 
-.modal__form {
-}
-
 .modal__input-label {
   display: block;
   margin: 0;
@@ -96,6 +93,11 @@
   border-radius: 8px;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+
+.modal__save-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 654px) {
