@@ -45,7 +45,7 @@ function handleProfileFormSubmit(e) {
   e.preventDefault();
   profileName.textContent = inputName.value;
   profileDescription.textContent = inputDescription.value;
-  profileEditModal.classList.remove("modal_is-opened");
+  closeModal(profilePostModal);
 }
 formSubmit.addEventListener("submit", handleProfileFormSubmit);
 
@@ -53,8 +53,7 @@ function handleCardFormSubmit(e) {
   e.preventDefault();
   console.log(linkInput.value);
   console.log(captionInput.value);
-  profilePostModal.classList.remove("modal_is-opened");
-  linkInput.value = " ";
-  captionInput.value = " ";
+  closeModal(profilePostModal);
+  addCardFormElement.reset();
 }
 addCardFormElement.addEventListener("submit", handleCardFormSubmit);
