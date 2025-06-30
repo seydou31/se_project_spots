@@ -1,3 +1,20 @@
+const initialCards = [
+  { name: "Val Thorens ", link: "../images/1" },
+  { name: " Restaurant Terrace", link: "../images/2 " },
+  { name: "An outdoor cafe ", link: " ../images/3" },
+  {
+    name: "A very long bridge, over the forest and through the trees ",
+    link: "../images/4 ",
+  },
+  { name: " Tunnel with morning light", link: "../images/5 " },
+  { name: " Mountain house", link: " ../images/6" },
+];
+
+initialCards.forEach(function (item) {
+  console.log(item.name);
+  console.log(item.link);
+});
+
 const profileEditModal = document.querySelector("#edit-profile-modal");
 const newPostModal = document.querySelector("#new-post-modal");
 const EditButton = document.querySelector(".profile__edit");
