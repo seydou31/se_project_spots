@@ -49,7 +49,7 @@
             <template id="card-template">
               <li class="card">
                 <button type="button" class="card__delete-btn"></button>
-                <img class="card__image" alt="" src="" />
+                <img class="card__image" alt="" src="#" />
                 <div class="card__footer">
                   <h3 class="card__description"></h3>
                   <button type="button" class="card__like-logo"></button>
@@ -109,16 +109,17 @@
               id="card-caption-name"
               class="modal__input-name"
               placeholder="Type your caption"
+              required
             />
             <button type="submit" class="modal__save-button">Save</button>
           </form>
         </div>
       </div>
-      <div id="image-modal" class="modal">
+      <div id="image-modal" class="modal modal_type_preview">
         <div class="modal__content">
           <button class="modal__x-btn"></button>
           <figure class="modal__figure">
-            <img src="" alt="" class="modal__image" />
+            <img src="#" alt="" class="modal__image" />
             <figcaption class="modal__caption"></figcaption>
           </figure>
         </div>
