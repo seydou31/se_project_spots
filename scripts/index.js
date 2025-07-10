@@ -67,16 +67,48 @@ const formSubmit = profileEditModal.querySelector(".modal__form");
 const addCardFormElement = newPostModal.querySelector(".modal__form");
 const linkInput = addCardFormElement.querySelector("#card-image-name");
 const captionInput = addCardFormElement.querySelector("#card-caption-name");
+const modalSaveBtn = addCardFormElement.querySelector(".modal__save-button");
+
+const closeModalOverlay = () => {
+  document.querySelectorAll(".modal").forEach((modalElement) => {
+    modalElement.addEventListener("click", (evt) => {
+      if (evt.target === evt.currentTarget) {
+        closeModal(modalElement);
+      }
+    });
+  });
+};
+
+const eventListenerEscapeKey = (evt) => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    if (modal.classList.contains("modal_is-opened") && evt.key === "Escape") {
+      closeModal(modal);
+    }
+  });
+};
+
+const addEventListenerEscapeKey = () => {
+  document.addEventListener("keydown", eventListenerEscapeKey);
+};
+
+const removeEventListenerEscapeKey = () => {
+  document.removeEventListener("keydown", eventListenerEscapeKey);
+};
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  closeModalOverlay();
+  addEventListenerEscapeKey();
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  removeEventListenerEscapeKey();
 }
 
 function openEditContent() {
+  resetValidation(formSubmit, [inputName, inputDescription]);
   openModal(profileEditModal);
   inputName.value = profileName.textContent;
   inputDescription.value = profileDescription.textContent;
@@ -116,5 +148,6 @@ function handleCardFormSubmit(e) {
   cardContainer.prepend(card);
 
   addCardFormElement.reset();
+  disabledSubmitButton(modalSaveBtn);
 }
 addCardFormElement.addEventListener("submit", handleCardFormSubmit);
