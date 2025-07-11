@@ -130,6 +130,10 @@
   padding-left: 12px;
 }
 
+.modal__input-name:focus {
+  outline: none;
+}
+
 .modal__save-button {
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
