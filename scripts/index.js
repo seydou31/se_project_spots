@@ -165,6 +165,7 @@ function handleCardFormSubmit(e) {
   cardContainer.prepend(card);
 
   addCardFormElement.reset();
+  modalSaveBtn.classList.add(settings.inactiveButtonClass);
   disabledSubmitButton(modalSaveBtn);
 }
 addCardFormElement.addEventListener("submit", handleCardFormSubmit);
