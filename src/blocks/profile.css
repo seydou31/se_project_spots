@@ -176,7 +176,7 @@
   }
 
   .profile__avatar-btn {
-    visibility: visible;
+    visibility: hidden;
   }
 
   .profile__avatar-btn::after {
