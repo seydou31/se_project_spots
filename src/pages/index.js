@@ -25,7 +25,7 @@ api
     profileImage.src = userInfo.avatar;
     cards.forEach(function (item) {
       const card = getCardElement(item);
-      cardContainer.prepend(card);
+      cardContainer.append(card);
     });
   })
   .catch((err) => {
